@@ -143,7 +143,7 @@ class Box(object):
           :type additional_contents: str
         """
         # ---------------------------------------------------------------------
-        # TODO: 3. Implement and test this function.
+        # DONE: 3. Implement and test this function.
         #     See the testing code (below) for more examples.
         # ---------------------------------------------------------------------
         # ---------------------------------------------------------------------
@@ -165,6 +165,17 @@ class Box(object):
         #       Read_this_ONLY_when_asked_Part_2.txt
         #    and complete your work on the problem.
         # ---------------------------------------------------------------------
+        space = self.volume - len(self.contents)
+        numb = min(space, len(additional_contents))
+        additional = ''
+        for k in range(numb):
+            additional = additional + additional_contents[k]
+        self.contents = self.contents + additional
+
+        ret = ''
+        for k in range(numb, len(additional_contents)):
+            ret = ret + additional_contents[k]
+        return ret
 
     def double(self):
         """
