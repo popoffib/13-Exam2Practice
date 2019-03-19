@@ -351,7 +351,7 @@ class Box(object):
           when this Box was constructed.
         """
         # ---------------------------------------------------------------------
-        # TODO: 7. Implement and test this function.
+        # DONE: 7. Implement and test this function.
         #     The testing code is already written for you (above).
         # ---------------------------------------------------------------------
         # ---------------------------------------------------------------------
@@ -359,6 +359,9 @@ class Box(object):
         #    DIFFICULTY:      4
         #    TIME ESTIMATE:   5 minutes.
         # ---------------------------------------------------------------------
+        self.history = self.history + [self.contents]
+        self.volume = self.volumeb
+        self.contents = self.contentsb
 
     def steal(self, other_box):
         """
